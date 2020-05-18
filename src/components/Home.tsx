@@ -9,7 +9,7 @@ import Card from "react-bootstrap/Card";
 import GlobalNav from './GlobalNav';
 
 export default function Home() {
-  const SchoolProven = require("../img/SchoolProven.png");
+  const SchoolProven = require("../img/SchoolProven/SchoolProven.png");
   const TechOut = require("../img/TechOut.png");
 
   return (

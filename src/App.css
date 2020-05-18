@@ -14,9 +14,22 @@
   margin-bottom: 2rem;
 }
 
+.SchoolProven-Storyboard {
+  height: 50vh;
+}
+
+.SchoolProven-Storyboard-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* BOOTSTRAP OVERRIDES */
 .card-body {
   font-size: large;
+}
+
+.carousel {
+  background-color: lightgray;
 }
 
 .container {
