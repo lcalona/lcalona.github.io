@@ -1,6 +1,5 @@
-.Home {
-  margin-top: 4rem;
-  margin-bottom: 8rem;
+.GlobalNav {
+  margin-bottom: 4rem;
 }
 
 .Home-intro {
@@ -16,11 +15,28 @@
 }
 
 /* BOOTSTRAP OVERRIDES */
+.card-body {
+  font-size: large;
+}
+
+.container {
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+
 .navbar {
   padding: 0 0 12px 0;
   justify-content: space-between;
 }
 
-.card-body {
-  font-size: large;
+/* GLOBAL OVERRIDES */
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
 }

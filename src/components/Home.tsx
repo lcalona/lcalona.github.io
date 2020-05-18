@@ -1,36 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+
+import GlobalNav from './GlobalNav';
 
 export default function Home() {
   const SchoolProven = require("../img/SchoolProven.png");
   const TechOut = require("../img/TechOut.png");
 
-  const title = (
-    <>
-      <h2>Luis Calona</h2>
-      <i>Software Engineer</i>
-    </>
-  );
-
   return (
-    <>
       <Container className="Home">
-        <Navbar sticky="top" bg="white">
-          <Navbar.Brand href="#home">{title}</Navbar.Brand>
-          <Nav>
-            <Nav.Link>Projects</Nav.Link>
-            <Nav.Link>About Me</Nav.Link>
-          </Nav>
-        </Navbar>
-
-        <br />
-        <br />
+        <GlobalNav />
 
         <p className="Home-intro">
           Hi, I'm Luis. I'm currently a senior at UC San Diego studying Computer
@@ -43,16 +27,18 @@ export default function Home() {
           <h2 className="Home-projects-title">My Projects</h2>
           <Row>
             <Col>
-              <Card>
-                <Card.Body>
-                  <Card.Img src={SchoolProven} />
-                  <Card.Title>SchoolProven</Card.Title>
+              <Link to="/SchoolProven">
+                <Card>
                   <Card.Body>
-                    A web application aimed at providing students with a
-                    comprehensive tool for researching their classes.
+                    <Card.Img src={SchoolProven} />
+                    <Card.Title>SchoolProven</Card.Title>
+                    <Card.Body>
+                      A web application aimed at providing students with a
+                      comprehensive tool for researching their classes.
+                    </Card.Body>
                   </Card.Body>
-                </Card.Body>
-              </Card>
+                </Card>
+              </Link>
             </Col>
             <Col>
               <Card>
@@ -72,6 +58,5 @@ export default function Home() {
           </Row>
         </div>
       </Container>
-    </>
   );
 }
