@@ -16,6 +16,18 @@ export default function SchoolProven() {
     </>
   );
 
+  const renderCarousel = (imageSources: any[]) => (
+    <Carousel>
+      {imageSources.map((imageSource) => (
+        <Carousel.Item>
+          <div className="Carousel-Image-Container">
+            <Image className="Carousel-Image" src={imageSource} fluid rounded />
+          </div>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  );
+
   const background = renderSection(
     "Background",
     <p>
@@ -145,38 +157,11 @@ export default function SchoolProven() {
 
   const storyboards = renderSection(
     "Storyboards",
-    <Carousel>
-      <Carousel.Item>
-        <div className="SchoolProven-Storyboard-container">
-          <Image
-            className="SchoolProven-Storyboard"
-            src={require("../img/SchoolProven/Storyboards/Storyboard1.png")}
-            fluid
-            rounded
-          />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="SchoolProven-Storyboard-container">
-          <Image
-            className="SchoolProven-Storyboard"
-            src={require("../img/SchoolProven/Storyboards/Storyboard2.png")}
-            fluid
-            rounded
-          />
-        </div>
-      </Carousel.Item>
-      <Carousel.Item>
-        <div className="SchoolProven-Storyboard-container">
-          <Image
-            className="SchoolProven-Storyboard"
-            src={require("../img/SchoolProven/Storyboards/Storyboard3.png")}
-            fluid
-            rounded
-          />
-        </div>
-      </Carousel.Item>
-    </Carousel>
+    renderCarousel([
+      require("../img/SchoolProven/Storyboards/Storyboard1.png"),
+      require("../img/SchoolProven/Storyboards/Storyboard2.png"),
+      require("../img/SchoolProven/Storyboards/Storyboard3.png"),
+    ])
   );
 
   const lowFidelityPrototypes = renderSection("", <div />);
@@ -350,7 +335,15 @@ export default function SchoolProven() {
     </>
   );
 
-  const highFidelityPrototypes = renderSection("", <div />);
+  const highFidelityPrototypes = renderSection(
+    "High Fidelity Prototypes",
+    renderCarousel([
+      require("../img/SchoolProven/HighFidelityPrototypes/Wireframe1.png"),
+      require("../img/SchoolProven/HighFidelityPrototypes/Wireframe2.png"),
+      require("../img/SchoolProven/HighFidelityPrototypes/Wireframe3.png"),
+      require("../img/SchoolProven/HighFidelityPrototypes/Wireframe4.png"),
+    ])
+  );
 
   return (
     <Container>
