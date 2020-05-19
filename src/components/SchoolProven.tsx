@@ -164,7 +164,34 @@ export default function SchoolProven() {
     ])
   );
 
-  const lowFidelityPrototypes = renderSection("", <div />);
+  const lowFidelityPrototypes = renderSection("Low Fidelity Prototypes",
+    <>
+      <h3>Paper Prototype 1</h3>
+      {renderCarousel([
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/1.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/2.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/3.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/4.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/5.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype1/6.png"),
+      ])}
+      <h3>Paper Prototype 2</h3>
+      {renderCarousel([
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/1.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/2.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/3.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/4.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/5.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/6.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/7.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/8.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/9.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/10.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/11.png"),
+        require("../img/SchoolProven/LowFidelityPrototypes/PaperPrototype2/12.png"),
+      ])}
+    </>
+  );
 
   const userTesting = renderSection(
     "User Testing",
